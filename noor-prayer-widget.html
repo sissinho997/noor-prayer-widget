@@ -213,6 +213,23 @@
             text-align: center;
             transition: all 0.3s;
         }
+        .setting-range {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 4px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 2px;
+            outline: none;
+        }
+        .setting-range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 16px; height: 16px;
+            background: var(--gold);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
         .setting-btn:hover { background: var(--gold); color: var(--bg); }
 
         /* ── Top bar ── */
@@ -229,12 +246,12 @@
             gap: 10px;
         }
 
-        .clock { font-size: 32px; font-weight: 300; letter-spacing: 1px; }
+        .clock { font-size: 36px; font-weight: 300; letter-spacing: 1px; }
 
         .date-block { text-align: right; }
 
         .greg-date {
-            font-size: 12px;
+            font-size: 13px;
             letter-spacing: 1.5px;
             color: var(--text-dim);
             text-transform: uppercase;
@@ -244,7 +261,7 @@
 
         .hijri-date {
             font-family: 'Amiri', serif;
-            font-size: 15px;
+            font-size: 17px;
             color: var(--gold-dim);
             display: flex;
             flex-direction: row;
@@ -274,7 +291,7 @@
 
         .duaa-ornament {
             font-family: 'Amiri', serif;
-            font-size: 38px;
+            font-size: 42px;
             color: var(--gold);
             margin-bottom: 12px;
             text-shadow: 0 0 20px var(--gold-dim);
@@ -284,7 +301,7 @@
 
         .duaa-arabic {
             font-family: 'Amiri', serif;
-            font-size: 36px;
+            font-size: 40px;
             line-height: 1.8;
             color: var(--text);
             direction: rtl;
@@ -293,7 +310,7 @@
             transition: opacity 1s ease, font-size 0.4s;
         }
         .duaa-arabic.fade { opacity: 0; }
-        .duaa-arabic.enlarged { font-size: 44px; }
+        .duaa-arabic.enlarged { font-size: 50px; }
 
         .duaa-line {
             width: 80px;
@@ -306,7 +323,7 @@
         .duaa-line.hidden { display: none; }
 
         .duaa-translation {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 300;
             color: var(--text-dim);
             font-style: italic;
@@ -319,7 +336,7 @@
         .duaa-translation.hidden { display: none; }
 
         .duaa-ref {
-            font-size: 12px;
+            font-size: 14px;
             color: var(--text-muted);
             margin-top: 6px;
             letter-spacing: 1px;
@@ -356,18 +373,18 @@
             color: var(--text-muted);
         }
 
-        .next-name { font-size: 16px; font-weight: 600; color: var(--gold); }
+        .next-name { font-size: 18px; font-weight: 600; color: var(--gold); }
 
-        .next-sep { color: var(--text-muted); font-size: 12px; }
+        .next-sep { color: var(--text-muted); font-size: 14px; }
 
         .next-name-ar {
             font-family: 'Amiri', serif;
-            font-size: 16px;
+            font-size: 18px;
             color: var(--gold);
         }
 
         .next-countdown {
-            font-size: 15px;
+            font-size: 17px;
             font-weight: 300;
             color: var(--gold-light);
             font-variant-numeric: tabular-nums;
@@ -394,7 +411,7 @@
         }
 
         .prayer-item .p-name {
-            font-size: 18px;
+            font-size: 20px;
             letter-spacing: 1px;
             text-transform: uppercase;
             color: var(--text-muted);
@@ -403,7 +420,7 @@
         .prayer-item.active .p-name { color: var(--gold); }
 
         .prayer-item .p-time {
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 400;
             color: var(--text-dim);
             font-variant-numeric: tabular-nums;
@@ -412,7 +429,7 @@
 
         .prayer-item .p-ar {
             font-family: 'Amiri', serif;
-            font-size: 20px;
+            font-size: 22px;
             color: var(--text-muted);
         }
         .prayer-item.active .p-ar { color: var(--gold-dim); }
@@ -429,6 +446,86 @@
             letter-spacing: 1px;
             text-align: center;
             padding: 2px 0;
+        }
+
+        /* ── Responsive: Tablets (≤768px) ── */
+        @media (max-width: 768px) {
+            html, body { overflow-y: auto; }
+
+            .clock { font-size: 24px; }
+
+            .hijri-date { font-size: 13px; }
+            .greg-date { font-size: 10px; }
+
+            .duaa-ornament { font-size: 30px; margin-bottom: 8px; }
+            .duaa-arabic { font-size: 28px; line-height: 1.7; max-width: 95%; }
+            .duaa-arabic.enlarged { font-size: 34px; }
+            .duaa-translation { font-size: 14px; max-width: 92%; }
+            .duaa-ref { font-size: 10px; }
+            .duaa-hero { padding: 8px 14px; }
+
+            .next-name { font-size: 14px; }
+            .next-name-ar { font-size: 14px; }
+            .next-countdown { font-size: 13px; }
+
+            .prayer-item .p-name { font-size: 13px; }
+            .prayer-item .p-time { font-size: 18px; }
+            .prayer-item .p-ar { font-size: 14px; }
+
+            .settings-panel { width: 260px; }
+        }
+
+        /* ── Responsive: Phones (≤480px) ── */
+        @media (max-width: 480px) {
+            .top-bar { padding: 8px 10px 4px; }
+            .top-left { gap: 6px; }
+            .clock { font-size: 20px; }
+            .burger { width: 22px; height: 18px; }
+
+            .hijri-date { font-size: 11px; gap: 3px; }
+            .greg-date { font-size: 9px; letter-spacing: 1px; }
+
+            .duaa-ornament { font-size: 24px; margin-bottom: 6px; }
+            .duaa-arabic { font-size: 22px; line-height: 1.6; max-width: 98%; }
+            .duaa-arabic.enlarged { font-size: 28px; }
+            .duaa-translation { font-size: 12px; max-width: 96%; line-height: 1.5; }
+            .duaa-ref { font-size: 9px; }
+            .duaa-line { width: 50px; margin: 8px auto; }
+            .duaa-hero { padding: 6px 10px; }
+
+            .next-prayer { gap: 6px; padding: 5px 8px; }
+            .next-label { font-size: 8px; letter-spacing: 1.5px; }
+            .next-name { font-size: 12px; }
+            .next-name-ar { font-size: 12px; }
+            .next-countdown { font-size: 12px; }
+
+            .prayers-row { gap: 1px; }
+            .prayer-item { padding: 4px 1px; }
+            .prayer-item .p-name { font-size: 10px; letter-spacing: 0.5px; }
+            .prayer-item .p-time { font-size: 14px; }
+            .prayer-item .p-ar { font-size: 11px; }
+
+            .prayer-strip { padding: 6px 6px 8px; }
+            .city-display { font-size: 8px; }
+
+            .settings-panel { width: 100%; padding: 40px 16px 16px; }
+        }
+
+        /* ── Responsive: Small phones (≤360px) ── */
+        @media (max-width: 360px) {
+            .clock { font-size: 18px; }
+            .duaa-arabic { font-size: 18px; line-height: 1.5; }
+            .duaa-arabic.enlarged { font-size: 24px; }
+            .duaa-translation { font-size: 11px; }
+            .duaa-ornament { font-size: 20px; }
+
+            .prayer-item .p-name { font-size: 8px; }
+            .prayer-item .p-time { font-size: 12px; }
+            .prayer-item .p-ar { font-size: 9px; }
+
+            .next-name { font-size: 11px; }
+            .next-name-ar { font-size: 11px; }
+            .next-countdown { font-size: 11px; }
         }
     </style>
 </head>
@@ -537,6 +634,17 @@
     <div class="setting-toggle">
         <span class="setting-toggle-label">Hadith (Prophet &#xFDFA;)</span>
         <div class="toggle-switch on" id="togHadith" onclick="toggleOption('hadith')"></div>
+    </div>
+
+    <div class="setting-divider"></div>
+    <div class="setting-label">Zoom</div>
+
+    <div class="setting-group">
+        <div class="setting-toggle">
+            <span class="setting-toggle-label">Zoom Level</span>
+            <span class="setting-toggle-label" id="zoomValue" style="color:var(--gold);font-weight:600;">100%</span>
+        </div>
+        <input type="range" class="setting-range" id="setZoom" min="50" max="200" step="5" value="100" oninput="document.getElementById('zoomValue').textContent=this.value+'%'; document.body.style.zoom=this.value/100;">
     </div>
 
     <div class="setting-divider"></div>
@@ -737,6 +845,8 @@
             document.getElementById('setCountry').value = settings.country;
             document.getElementById('setMethod').value = settings.method;
             document.getElementById('setTheme').value = settings.theme;
+            document.getElementById('setZoom').value = settings.zoom || 100;
+            document.getElementById('zoomValue').textContent = (settings.zoom || 100) + '%';
         }
     }
 
@@ -746,12 +856,14 @@
         saveSettings(settings);
     }
 
+    // ── Size controls ──
     function applySettings() {
         settings.city = document.getElementById('setCity').value.trim() || settings.city;
         settings.country = document.getElementById('setCountry').value.trim() || settings.country;
         settings.method = document.getElementById('setMethod').value;
         settings.theme = document.getElementById('setTheme').value;
-
+        settings.zoom = parseInt(document.getElementById('setZoom').value);
+        document.body.style.zoom = settings.zoom / 100;
         applyTheme(settings.theme);
         saveSettings(settings);
         fetchPrayerTimes();
@@ -1091,6 +1203,7 @@
     async function init() {
         applyTheme(settings.theme);
         applyVisibility();
+        if (settings.zoom && settings.zoom !== 100) document.body.style.zoom = settings.zoom / 100;
         updateClock();
 
         // Show loading text while fetching first ayah
