@@ -1,12 +1,30 @@
-بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
 
-May this widget be a source of remembrance and benefit. JazakAllahu Khairan.
+**بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ**
+
+*May this widget be a source of remembrance and benefit. JazakAllahu Khairan.*
 
 # Noor - Islamic Prayer Times & Du'a Widget
 
 A beautiful Rainmeter widget that displays live Islamic prayer times and rotating Quranic du'a (supplications) with an elegant dark interface.
 
 ![Noor Widget](https://img.shields.io/badge/Rainmeter-Widget-blue) ![Version](https://img.shields.io/badge/version-1.0.0-gold)
+
+---
+
+## Screenshots
+
+### Gold Theme (Default)
+![Gold Theme](screenshots/gold-theme.png)
+
+### Emerald Theme
+![Emerald Theme](screenshots/emerald-theme.png)
+
+### Rose Gold Theme
+![Rose Gold Theme](screenshots/rosegold-theme.png)
+
+### Burger Menu (Settings)
+![Settings Menu](screenshots/settings-menu.png)
+![Settings Menu - Content Sources](screenshots/settings-menu-2.png)
 
 ---
 
@@ -200,7 +218,3 @@ Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0)
 Free to use, share, and modify for non-commercial purposes. Just credit the original author. See [LICENSE](LICENSE) for details.
 
 ---
-
-**بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ**
-
-*May this widget be a source of remembrance and benefit. JazakAllahu Khairan.*
