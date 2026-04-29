@@ -1,3 +1,7 @@
+بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
+
+May this widget be a source of remembrance and benefit. JazakAllahu Khairan.
+
 # Noor - Islamic Prayer Times & Du'a Widget
 
 A beautiful Rainmeter widget that displays live Islamic prayer times and rotating Quranic du'a (supplications) with an elegant dark interface.
